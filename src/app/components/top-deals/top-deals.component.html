@@ -1,11 +1,26 @@
-<div>Some tags before</div>
-  <owl-carousel-o [options]="customOptions">
+<div class="row">
+  <div class="col-md-8 offset-2">
+    <owl-carousel-o [options]="customOptions">
 
-    <ng-container *ngFor="let slide of slidesStore">
-      <ng-template carouselSlide [id]="slide.id">
-        <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
-      </ng-template>
-    </ng-container>
-
-  </owl-carousel-o>
-  <div>Some tags after</div>
+      <ng-container *ngFor="let slide of topDealsData">
+        <ng-template carouselSlide [id]="slide.id">
+         
+          <div class="card1 shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;">
+            <!-- <div class="card-body"> -->
+                <img [src]="slide.productImageSlug[0]
+                " alt="" class="carousal-img" [routerLink]="['/view-product-details',slide.drugCode]">
+                <p>{{slide.medicineName}}</p>
+                <p class="des">{{slide.description}}</p>
+                <p class="pro-type">{{slide.type}}</p><br>
+                <span class="mrp">MRP</span>
+                <h5 class="mrp"><i class="bi bi-currency-rupee"></i>{{slide.discountPrice}}</h5>
+            </div>
+          <!-- </div> -->
+        </ng-template>
+      </ng-container>
+  
+    </owl-carousel-o>
+    <div>Some tags after</div>
+  </div>
+</div>
+  

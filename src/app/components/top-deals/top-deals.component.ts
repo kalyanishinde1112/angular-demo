@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { HttpService } from 'src/app/core/services/http.service';
 
 @Component({
   selector: 'app-top-deals',
   templateUrl: './top-deals.component.html',
   styleUrls: ['./top-deals.component.scss']
 })
-export class TopDealsComponent {
+export class TopDealsComponent implements OnInit {
+  topDealsData:any[]=[];
+
+  constructor(private http:HttpService){}
+  ngOnInit(){
+    this.getTopdealsData();
+  }
   slidesStore:any
   customOptions: OwlOptions = {
     loop: true,
@@ -31,5 +38,12 @@ export class TopDealsComponent {
       }
     },
     nav: true
+  }
+  getTopdealsData(){
+    this.http.getDataFromServer("top-deals").subscribe((el:any)=>{
+      this.topDealsData=el;
+      console.log("topdeals",this.topDealsData);
+      
+    })
   }
 }

@@ -9,19 +9,57 @@
     </div>
 </div>
  </div>
+
+ <!-- search bar  -->
  <div class="container w-75">
-    <div class="input-group input-group- search-head">
-        <div class="input-group-prepend">
-          <span class="input-group-text " id="inputGroup-sizing-lg"><span></span>
-            Maharashtra</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-        <span class="input-group-text search" id="inputGroup-sizing-lg"><i class="bi bi-search"></i>Search</span>
-      </div>
- </div>
- <div class="container w-75">
-    <div class="row">
-        <img src="https://www.medibuddy.in/assets/banners/medicine-page.webp" alt="">
+    <div class="input-group input-group-lg rounded-3">
+        <span class="input-group-text search-head bg-body" id="inputGroup-sizing-lg"><span >{{showDefaultPinCode  ?   "Pune 560029" : pincodeDetails?.pincodeCity + " " + pincodeDetails?.pincode   }}<i class="bi bi-chevron-down text-primary ms-4 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></span> </span>
+        <input type="text" class="form-control search-head" placeholder="Search Medicines" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <span class="input-group-text search-head bg-body text-primary fw-semibold" id="inputGroup-sizing-lg"><i class="bi bi-search ms-3 fs-5" ></i>&nbsp;Search</span>
     </div>
+
+      <!-- second section -->
+      <div class="container w-75">
+        <div class="row">
+            <img src="https://www.medibuddy.in/assets/banners/medicine-page.webp" alt="">
+        </div>
+     </div>
+
+     <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="float-start top-deals" routerLink="/top-deals-by-category">Top Deals</h4>
+                <div class="float-end mb-3 view" >View All</div><br>
+            </div>
+        </div>
+       
+
+
+     </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn ></button>
+
+            </div>
+
+              <div class="modal-body">
+                <label for="validationCustom01" class="form-label fs-5 fw-semibold">Set Your Location</label>
+                <input type="text" class="form-control" id="validationCustom01" maxlength="6" [(ngModel)]="pincode" required>
+        <div class="invalid-feedback d-block" *ngIf="displayErrorMessage">
+          No Providers available at this pincode
+        </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" (click)=" submitPincode()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal code ends -->
+
  </div>
+
  <app-top-deals></app-top-deals>

@@ -9,12 +9,22 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { config } from 'rxjs';
 import { TopDealsComponent } from './components/top-deals/top-deals.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import{HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import { TopDealByCategroyComponent } from './components/top-deal-by-categroy/top-deal-by-categroy.component';
+import { TopDealsHeaderComponent } from './components/top-deals-header/top-deals-header.component';
+import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
+import { TopHeaderComponent } from './components/top-header/top-header.component';
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         MedicineHomeComponent,
-        TopDealsComponent
+        TopDealsComponent,
+        TopDealByCategroyComponent,
+        TopDealsHeaderComponent,
+        ViewProductDetailsComponent,
+        TopHeaderComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -23,7 +33,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         AppRoutingModule,
         CoreModule,
         CarouselModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        HttpClientModule,
+        FormsModule
+        
         
          
         

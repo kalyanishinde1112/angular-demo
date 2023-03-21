@@ -18,6 +18,8 @@ const routes: Routes = [
 {path:"top-deals-header",component:TopDealsHeaderComponent},
 
   {path:'',redirectTo:'/home',pathMatch:'full'},
+  
+  { path: 'cart', loadChildren: () => import('./cart/cart.module').then(m => m.CartModule) },
   {path:'**',component:PageNotFoundComponent}
 ];
 

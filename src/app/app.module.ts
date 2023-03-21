@@ -10,11 +10,13 @@ import { config } from 'rxjs';
 import { TopDealsComponent } from './components/top-deals/top-deals.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{HttpClientModule} from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopDealByCategroyComponent } from './components/top-deal-by-categroy/top-deal-by-categroy.component';
 import { TopDealsHeaderComponent } from './components/top-deals-header/top-deals-header.component';
 import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
 import { TopHeaderComponent } from './components/top-header/top-header.component';
+import { CommonModule } from '@angular/common';
+ 
 @NgModule({
     declarations: [
         AppComponent,
@@ -24,7 +26,8 @@ import { TopHeaderComponent } from './components/top-header/top-header.component
         TopDealByCategroyComponent,
         TopDealsHeaderComponent,
         ViewProductDetailsComponent,
-        TopHeaderComponent
+        TopHeaderComponent,
+       
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -35,11 +38,9 @@ import { TopHeaderComponent } from './components/top-header/top-header.component
         CarouselModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        FormsModule
-        
-        
-         
-        
-    ]
+        FormsModule,
+        ReactiveFormsModule        
+    ],
+   exports: [FormsModule, ReactiveFormsModule]
 })
 export class AppModule { }

@@ -7,7 +7,7 @@ import { HttpService } from 'src/app/core/services/http.service';
   styleUrls: ['./top-deal-by-categroy.component.scss']
 })
 export class TopDealByCategroyComponent implements OnInit{
-  dataCategory:any;
+  dataCategory:any=[];
   constructor(private http:HttpService){
 
   }

@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
@@ -14,9 +14,13 @@ httpHeaders:HttpHeaders=new HttpHeaders().set("Content-type","application/json")
 const url=this.baseUrl+endpoint;
 return this.http.get(url,{headers:this.httpHeaders})
   }
-  getPincode(){
-    const url=this.baseUrl;
-    return this.http.get(url,{headers:this.httpHeaders})
+  getDataFromServerByQueryParameter(endPoint:string,httpParams:HttpParams){
+    const url=this.baseUrl+endPoint;
+    return this.http.get(url,{headers:this.httpHeaders,params:httpParams})
+  }
+  postDataToserver(endpoint:string,data:any){
+const url=this.baseUrl+endpoint;
+return this.http.post(url,data,{headers:this.httpHeaders})
   }
 }
 

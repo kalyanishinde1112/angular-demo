@@ -1,0 +1,141 @@
+// first section
+.home-container{
+    width: 60%;
+    height: 50%;
+}
+ a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    // font-size: 14;
+ }
+ h4{
+    font-size: 14;
+ }
+.banner-surgery {
+    box-shadow: 0 0 0 0 #d3d3d3, 0 6px 20px 0 #d3d3d3;
+width: 100%;
+}
+.shadow-containerr{
+width: 100%;
+}
+.card1{
+     width: 200px !important;
+    height: 300px;
+    border-right: 50px;
+    border-left: 50px;
+    border-top: 50px;
+    border-bottom: 50px;
+    border-style: none;
+    background-color:whitesmoke !important;
+    // box-shadow: 0 0 25px rgb(24 24 24 / 16%);
+    // box-shadow: 10px 10px 5px #aaaaaa;
+
+
+}
+
+//  second information section
+.rb-gradient-text {
+    background: linear-gradient(104deg,#4285f4 4%,#db4437 35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.mdTxt {
+    font-size: 18px;
+    line-height: 23px!important;
+}
+.second{
+padding-right: 50px;
+position: relative;
+right: 90px;
+top:40px
+}
+.first{
+    border: 2px;
+    width: 30%;
+    margin-left: 220px;
+    font-size: 30px;
+    line-height:30px !important;
+
+}
+.info{
+    font-size: 1.25rem;
+    position: relative;
+    left: 220px;
+    width: 60%;
+}
+.display-center {
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+}
+.medibuddy {
+    color: #1778f2;
+    margin-left: 5px;
+    height: 32px;
+    line-height: 30px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.medibuddy span {
+    color: #f40009;
+}
+.gold-text {
+    background: linear-gradient(#fbea86 0,#fbea86 8%,#fbea86 30%,#fbea86 40%,transparent 80%),linear-gradient(#fff 0,#e0af21 8%,#e0af21 25%,#e0af21 62.5%,#e0af21 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+ 
+.gold{
+    background-color: gold;
+}
+.bold {
+    font-weight: 700;
+}
+
+.btn-warning {
+ 
+    font-weight: 700;
+    
+    letter-spacing: 1px;
+    line-height: 15px;
+    border: 2px solid rgba(240, 173, 78, 0.75);
+    border-radius: 40px;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+    color:black;
+    background: #efcf58;
+    padding: 15px;
+    width: 90%;
+    margin-left: 60px;
+  }
+  .bi-arrow-right::before {
+    content: "\f138";
+    padding-left: 20px;
+    
+}
+
+// third section card 
+.card3{
+    width: 130px !important;
+   height: 270px;
+   border-right: 50px;
+   border-left: 50px;
+   border-top: 50px;
+   border-bottom: 50px;
+   border-style: none;
+   background-color:whitesmoke !important;
+   // box-shadow: 0 0 25px rgb(24 24 24 / 16%);
+   // box-shadow: 10px 10px 5px #aaaaaa;
+
+
+}
+ .card-heading{
+    font-size: 15px;
+    font-weight: bold;
+    color: #262c67;
+ }
+ .card-subheading{
+    font-size: 13px;
+ }

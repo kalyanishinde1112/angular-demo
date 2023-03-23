@@ -1,0 +1,86 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                <img src="https://www.medibuddy.in/assets/logos/medibuddyWithName.svg" height="30" alt="medibuddy logo"
+                    loading="lazy" />
+            </a>
+             
+        </div>
+         
+        <div class="d-flex align-items-center">
+            <!-- Icon -->
+            <a class="text-reset me-3" href="#">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+
+            <!-- Notifications -->
+            <div class="headercontent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="">About us</a>
+                    </li>
+                    <li class="nav-item" *ngIf="!isUserLoggedIn">
+                        <a class="nav-link login" routerLink="/home" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+
+                    </li>
+                    <li class="nav-item" >
+                      <span class=" nav-link" *ngIf="isUserLoggedIn">{{userDetails.userName}}</span>
+                    </li>
+                    <li class="nav-item"  routerLink="/cart">
+                      <a class="nav-link" routerLink=""> <i class="bi bi-bag-check-fill cart" ><span class="border rounded-circle px-1 small">{{cartCounter}}</span></i></a>
+                  </li>
+                </ul>
+            </div>
+            <!-- Avatar -->
+
+        </div>
+        <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+  <!-- Modal for sign in implementation-->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{pageTitle}}</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeBn>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div [ngSwitch]="activeComponent">
+            <app-sign-in *ngSwitchCase="'signin'" (emitAction)="getAction($event)"></app-sign-in>
+            <app-sign-up *ngSwitchCase="'signup'"></app-sign-up>
+          </div>
+          <div class="row">
+            <div class="col-md-3 offset-2" >
+              <button type="submit" class="btn btn-primary btn-block signin " (click)=" showSignin()">Sign in</button>
+            </div>
+            <div class="col-md-3">
+              <button type="submit" class="btn btn-primary btn-block signup" (click)="showSignupcomp()">Sign Up</button>
+
+              </div>
+          </div>
+              
+              
+        </div>
+     
+      </div>
+    </div>
+  </div>

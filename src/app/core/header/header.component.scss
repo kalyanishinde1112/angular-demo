@@ -1,0 +1,29 @@
+a{
+color: #1778f2!important;
+ font-weight: 70;
+}
+li{
+    padding-right: 30px;
+}
+img, svg {
+    vertical-align: middle;
+    margin-left: 60px;
+}
+.login{
+    cursor: pointer;
+}
+.cart{
+    font-size: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.small{
+    position: absolute;
+    background-color: red;
+        // right:6px;
+    bottom:30px;
+    font-size:12px;
+    color:white
+
+
+}

@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignInComponent } from '../components/sign-in/sign-in.component';
 import { SignUpComponent } from '../components/sign-up/sign-up.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -22,14 +23,15 @@ import { SignUpComponent } from '../components/sign-up/sign-up.component';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
     
   ],
   exports:[
     HeaderComponent,
     FooterComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,RouterModule
   ]
 })
 export class CoreModule {

@@ -1,5 +1,6 @@
 import { Component,OnInit} from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CartService } from 'src/app/cart/cart.service';
 import { HttpService } from 'src/app/core/services/http.service';
 import { SharedService } from 'src/app/core/shared.service';
 
@@ -11,7 +12,7 @@ import { SharedService } from 'src/app/core/shared.service';
 export class TopDealsComponent implements OnInit {
   topDealsData:any[]=[];
 
-  constructor(private http:HttpService,private shared:SharedService){}
+  constructor(private http:HttpService,private cart:CartService){}
   ngOnInit(){
     this.getTopdealsData();
   }
@@ -48,18 +49,8 @@ export class TopDealsComponent implements OnInit {
     })
   }
   addTocart(item:any){
- let cartItems:any=this.getproductDatafromLocalStorage();
- cartItems.push(item);
- localStorage.setItem("cartItems",JSON.stringify(cartItems));
- this.shared.emitItem(cartItems.length)
+    this.cart.addItemtoCart(item)
   }
   getproductDatafromLocalStorage(){
-    let items=localStorage.getItem("cartItems");
-    if(items){
-      items=JSON.parse(items);
-      return items;
-    }else{
-      return [];
-    }
   }
 }

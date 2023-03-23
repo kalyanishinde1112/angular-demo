@@ -16,6 +16,7 @@ import { TopDealsHeaderComponent } from './components/top-deals-header/top-deals
 import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
 import { TopHeaderComponent } from './components/top-header/top-header.component';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
  
 @NgModule({
     declarations: [
@@ -39,8 +40,8 @@ import { CommonModule } from '@angular/common';
         BrowserAnimationsModule,
         HttpClientModule,
         FormsModule,
-        ReactiveFormsModule        
+        ReactiveFormsModule
     ],
-   exports: [FormsModule, ReactiveFormsModule]
+   exports: [FormsModule, ReactiveFormsModule,RouterModule,TopDealsHeaderComponent]
 })
 export class AppModule { }

@@ -1150,5 +1150,79 @@
       "isMobileVerified": true,
       "id": 2
     }
+  ],
+  "orders": [
+    {
+      "customerName": "",
+      "mobileNo": "",
+      "gender": "",
+      "dateOfBirth": "",
+      "emailId": "",
+      "address": {
+        "line1": "",
+        "line2": "",
+        "landmark": "",
+        "city": "",
+        "state": "",
+        "pincode": ""
+      },
+      "products": [
+        {
+          "productName": "HIMALAYA NEEM & TURMERIC SOAP 125GM",
+          "brand": "THE HIMALAYA DRUG COMPANY",
+          "type": "BOX",
+          "drugCode": 10014260,
+          "actualPrice": 50,
+          "discountPrice": 50,
+          "quantity": 1,
+          "producttotalPrice": 50
+        },
+        {
+          "productName": "HIMALAYA NEEM & TURMERIC SOAP 125GM",
+          "brand": "THE HIMALAYA DRUG COMPANY",
+          "type": "BOX",
+          "drugCode": 10014260,
+          "actualPrice": 50,
+          "discountPrice": 50,
+          "quantity": 1,
+          "producttotalPrice": 50
+        },
+        {
+          "productName": "HIMALAYA NEEM & TURMERIC SOAP 125GM",
+          "brand": "THE HIMALAYA DRUG COMPANY",
+          "type": "BOX",
+          "drugCode": 10014260,
+          "actualPrice": 50,
+          "discountPrice": 50,
+          "quantity": 1,
+          "producttotalPrice": 50
+        },
+        {
+          "productName": "HIMALAYA NEEM & TURMERIC SOAP 125GM",
+          "brand": "THE HIMALAYA DRUG COMPANY",
+          "type": "BOX",
+          "drugCode": 10014260,
+          "actualPrice": 50,
+          "discountPrice": 50,
+          "quantity": 1,
+          "producttotalPrice": 50
+        },
+        {
+          "productName": "HIMALAYA NEEM & TURMERIC SOAP 125GM",
+          "brand": "THE HIMALAYA DRUG COMPANY",
+          "type": "BOX",
+          "drugCode": 10014260,
+          "actualPrice": 50,
+          "discountPrice": 50,
+          "quantity": 1,
+          "producttotalPrice": 50
+        }
+      ],
+      "totalAmmount": 250,
+      "totalDiscount": 100,
+      "finalAmmountTOpay": 150,
+      "orderId": 1467830,
+      "id": 1
+    }
   ]
 }

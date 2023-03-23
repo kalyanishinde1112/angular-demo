@@ -17,6 +17,7 @@ import { ViewProductDetailsComponent } from './components/view-product-details/v
 import { TopHeaderComponent } from './components/top-header/top-header.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { LabsComponent } from './labs/labs.component';
  
 @NgModule({
     declarations: [
@@ -28,6 +29,7 @@ import { RouterModule } from '@angular/router';
         TopDealsHeaderComponent,
         ViewProductDetailsComponent,
         TopHeaderComponent,
+        LabsComponent,
        
     ],
     providers: [],

@@ -1,4 +1,4 @@
-import { Component,OnInit} from '@angular/core';
+import { Component,EventEmitter,Input,OnInit, Output} from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { CartService } from 'src/app/cart/cart.service';
 import { HttpService } from 'src/app/core/services/http.service';
@@ -10,7 +10,8 @@ import { SharedService } from 'src/app/core/shared.service';
   styleUrls: ['./top-deals.component.scss']
 })
 export class TopDealsComponent implements OnInit {
-  topDealsData:any[]=[];
+ @Input() topDealsData:any[]=[];
+ 
 
   constructor(private http:HttpService,private cart:CartService){}
   ngOnInit(){
@@ -53,4 +54,8 @@ export class TopDealsComponent implements OnInit {
   }
   getproductDatafromLocalStorage(){
   }
+
+  // send data to parent
+   
+  
 }

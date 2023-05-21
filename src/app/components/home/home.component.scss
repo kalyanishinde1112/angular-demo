@@ -1,4 +1,7 @@
 // first section
+.card{
+    width: 50px !important;
+}
 .home-container{
     width: 60%;
     height: 50%;
@@ -37,7 +40,7 @@ width: 100%;
 //  second information section
 .rb-gradient-text {
     background: linear-gradient(104deg,#4285f4 4%,#db4437 35%);
-    -webkit-background-clip: text;
+    // -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .mdTxt {
@@ -83,7 +86,7 @@ top:40px
 }
 .gold-text {
     background: linear-gradient(#fbea86 0,#fbea86 8%,#fbea86 30%,#fbea86 40%,transparent 80%),linear-gradient(#fff 0,#e0af21 8%,#e0af21 25%,#e0af21 62.5%,#e0af21 100%);
-    -webkit-background-clip: text;
+    // -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
  
@@ -139,3 +142,8 @@ top:40px
  .card-subheading{
     font-size: 13px;
  }
+ .dropdown-menu.show {
+    display: block;
+    width: 200px;
+    height: 150px;
+}

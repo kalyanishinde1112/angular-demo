@@ -14,8 +14,10 @@
  <div class="container w-75">
     <div class="input-group input-group-lg rounded-3">
         <span class="input-group-text search-head bg-body" id="inputGroup-sizing-lg"><span >{{showDefaultPinCode  ?   "Pune 560029" : pincodeDetails?.pincodeCity + " " + pincodeDetails?.pincode   }}<i class="bi bi-chevron-down text-primary ms-4 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></span> </span>
-        <input type="text" class="form-control search-head" placeholder="Search Medicines" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-        <span class="input-group-text search-head bg-body text-primary fw-semibold" id="inputGroup-sizing-lg"><i class="bi bi-search ms-3 fs-5" ></i>&nbsp;Search</span>
+        <input type="text" class="form-control search-head" placeholder="Search Medicines" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+        [(ngModel)]="searchTerm" (keyup)="onSearch()">
+        <span class="input-group-text search-head bg-body text-primary fw-semibold" id="inputGroup-sizing-lg"><i class="bi bi-search ms-3 fs-5"
+            ></i>&nbsp;Search</span>
     </div>
 
       <!-- second section -->
@@ -62,4 +64,4 @@
 
  </div>
 
- <app-top-deals></app-top-deals>
+ <app-top-deals [topDealsData]="filterData"></app-top-deals>

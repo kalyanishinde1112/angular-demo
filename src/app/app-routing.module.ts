@@ -7,6 +7,7 @@ import { TopDealsHeaderComponent } from './components/top-deals-header/top-deals
 
 import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
+import { BookingDoctorComponent } from './more/booking-doctor/booking-doctor.component';
  
 const routes: Routes = [
   
@@ -16,7 +17,7 @@ const routes: Routes = [
   // {path:'search',component:SearchComponent},
   {path:"view-product-details/:drugCode",component:ViewProductDetailsComponent},
 {path:"top-deals-header",component:TopDealsHeaderComponent},
-
+{path:"doctor-book",component:BookingDoctorComponent},
   {path:'',redirectTo:'/home',pathMatch:'full'},
   
   { path: 'cart', loadChildren: () => import('./cart/cart.module').then(m => m.CartModule) },

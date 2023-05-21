@@ -18,6 +18,7 @@ import { TopHeaderComponent } from './components/top-header/top-header.component
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LabsComponent } from './labs/labs.component';
+import { BookingDoctorComponent } from './more/booking-doctor/booking-doctor.component';
  
 @NgModule({
     declarations: [
@@ -30,6 +31,7 @@ import { LabsComponent } from './labs/labs.component';
         ViewProductDetailsComponent,
         TopHeaderComponent,
         LabsComponent,
+        BookingDoctorComponent,
        
     ],
     providers: [],

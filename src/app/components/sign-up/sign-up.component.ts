@@ -33,7 +33,7 @@ export class SignUpComponent implements OnInit,OnDestroy{
   submit(){
     // this.signupForm.value;
     console.log(this.signupForm.value);
-    this.http.postDataToserver("users",this.signupForm.value).subscribe((el:any)=>{
+    this.http.postDataToserver("Register",this.signupForm.value).subscribe((el:any)=>{
       alert("registred successfully")
     })
     

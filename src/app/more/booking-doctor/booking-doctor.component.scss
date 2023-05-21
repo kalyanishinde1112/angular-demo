@@ -1,0 +1,27 @@
+.heading{
+    background-color: rgb(102, 102, 227);
+    position: sticky;
+     
+}
+.card1{
+height: 100%;
+width:100%;
+}
+ 
+    .card{
+        margin: 1px;
+        width: 200px !important;
+        height: 150px !important;
+         
+    }
+ img{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    margin-left: 50px;
+    margin-top: 20px;
+ }
+ .border {
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+    height: 50px;
+}
